@@ -1,0 +1,71 @@
+
+conditional statements 
+  a) if-else
+  b) nested if-else 
+  c) if-else-if ladder
+  d) switch 
+  e) ternary operator 
+
+1. if -- Use if to specify a block of code to be executed, if a specified condition is true
+Syntax
+if (condition) {
+  // block of code to be executed if the condition is true
+}
+
+2. else -- Use the else statement to specify a block of code to be executed if the condition is false.
+Syntax
+if (condition) {
+    // block of code to be executed if the condition is true
+  } else {
+    // block of code to be executed if the condition is false
+  }
+
+3. else if --  Use the else if statement to specify a new condition if the first condition is false.
+Syntax
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+
+
+4. Ternary operator
+There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.
+It can be used to replace multiple lines of code with a single line, and is most often used to replace simple if else statements:
+
+ why we need ternary operator?
+  a) to reduce the code
+  b) to make the code more readable
+  c) to make the code more compact
+  
+Syntax
+variable = (condition) ? expressionTrue :  expressionFalse;
+
+5. Switch
+In switch statements, you can jump to verious cases based on your expression.
+Syntax
+switch(expression){
+  //cases
+  case one:
+    // code
+    break;
+  case two:
+    // code
+    break;
+  case three:
+    // code
+    break;
+   default:
+    // code
+    break;
+}
+
+NOTE: 
+-- Cases have to be the same type as expressions, must be a constant or literal
+-- duplicate case values are not allowed
+-- break is use to terminate the sequence
+-- if break is not used, it will continue to next case
+-- default will execute when none of the above does
+-- if default is not at the end, put break after it.
