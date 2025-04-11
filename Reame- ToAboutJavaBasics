@@ -30,3 +30,94 @@ Dynamic
 -- Errors will might not show till program is run 
 -- No need to delare dataType of variables 
 -- Saves time in writing code but might give error at runtime
+
+How Java code executes
+.java file      -------->compiler 
+(human readable)
+                    .class file  ---------->interpreter(line by line)
+                    (byte code)
+                                    Machine code
+                                    (0 and 1)
+
+bytecode 
+    -- this code will not directly run on a system
+    -- we need JVM to run this
+    -- Reason why Java is platform independent 
+
+MORE about Platform independence
+-- It means that byte code can run on all operating systen 
+-- we need to convert source code to machine code so computer can understand
+-- compiler helps in doing this by turning it into executable code 
+-- this executable code is a set of instructions for the computer
+-- After compiling c/c++ code we get .exe file which is platform dependent
+-- In java we get bytecode, JVM converts this to machine code 
+-- Java is platform-independent but JVM is platform dependent
+
+JDK vs JRE vs JVM vs JIT
+JDK = JRE + Development tools
+    -> inside JDK, we have JRE = JVM + Library classes
+        -> inside JRE, we have JVM 
+            -> inside JVM, JIT is present
+
+JDK
+- provides environment to develop and run the Java program
+- it is a package that includes:
+    1. development tools - to provide an environment to develop your program
+    2. JRE- to execute your program
+    3. a compiler - javac
+    4. archiver - jar
+    5. does generator - javadoc
+    6. interpreter / loader
+
+JRE 
+- it is an installation package that provides environment to only run the program
+- it is consists of 
+    1. deployment technology 
+    2. user interface toolkits 
+    3. integration libraries 
+    4. base libraries 
+    5. JVM 
+- after we get the .class file the next things happen at run time:
+    1. class loader loads all the classes needed to the execute the problem.
+    2. JVM sends code to byte core verifier to check the format of the code
+
+Compile time
+.java file   ----------------> .class file
+            javac(compilation)
+
+Runtime
+class loader  ---> Byte code verifier ---> Interpreter  ---> Runtime  ---> Hardware
+
+
+
+Importance and uses of JVM, JRE, and JDK.
+
+#1
+-- To compile the Java code, we need a tool and that tool is known as JDK ( Java Development Kit).
+-- Byte code runs on a machine so we have to convert the java code into the byte code.
+-- On installing the JDK, we get both updated JRE and JVM.
+
+#2
+-- JVM stands for Java Virtually Machine.
+-- JVM is the space where you execute the code.
+-- JVM is used to make the Java language a platform- independent.
+-- You have to compile the code through JDK and then run the code through JVM.
+-- JVM is platform dependent and it needs to be built for a particular OS.
+-- JVM is platform-dependent.
+
+#3
+-- JRE stands for Java Runtime Environment.
+-- JRE contains all the in-built classes and other extra files and libraries that we can use in our code.
+-- JRE validates the byte code.
+-- JRE loads a class.
+-- If you use extra libraries, and you also need an environment. An additional layer is present above the OS known as JRE.
+
+#4
+--  JVM is a part of JRE. JRE includes JVM and libraries.
+ JVM - Java Virutal Machine
+ JRE - Java Runtime Environment
+-- For development purposes, you need to install JDK (Java Development Kit) which consists of JRE and JVM.
+
+Memory - stack & heap
+Local variables are part of stack
+instance variables are part of heap
