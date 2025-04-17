@@ -1,4 +1,4 @@
-package FirstProgram_01;
+package FirstProgram;
 
 class JavaFirstProgram{
     public static void main(String[] args) {

@@ -1,15 +1,15 @@
-package ConditionalStatements_04;
+package ConditionalStatements;
 
-public class Else {
-    
+public class If {
+
     public static void main(String[] args) {
         int a = 100;
         int b = 90;
         
         if (a>b) {
             System.out.println("a is greaterthan b");
-        } else {
-            System.out.println("a is not a greater value");
         }
     }
+    
 }
+

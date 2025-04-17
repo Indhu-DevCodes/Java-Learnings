@@ -1,4 +1,4 @@
-package DataType_02.DataTypeCasting;
+package DataType.DataTypeCasting;
 
 public class TypeCasting {
     

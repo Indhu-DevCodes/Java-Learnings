@@ -1,4 +1,4 @@
-package DataType_02;
+package DataType;
 
 class JavaDataType{
 
