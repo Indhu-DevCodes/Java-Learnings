@@ -1,79 +1,158 @@
 package Practice;
 
+import java.util.Scanner;
+
 public class Programs_Arrays {
 
+    public static void main(String[] args) {
+        ascendingArr();
+        descendingArr();
+        // sumOfArrElements();
+        // avgValueOfElements();
+        // storeElementAndPrint();
+        // userInputArr();
+        userInputSumArr();
+    }
+
     
+// 1. Write a program to Sort Numeric Array In Ascending Order
+
+// Sample Output
+// Array = {23, 5, 67, 20, 3, 30, 79, 3, 70, 2}
+// Ascending Order = {2, 3, 3, 5, 20, 23, 30, 67, 70, 79}
+    private static void ascendingArr() {
+        int[] array = {23, 5, 67, 20, 3, 30, 79, 3, 70, 2};
+
+    }
+
+// 2. Write a program to Sort Numeric Array In Descending Order
+
+// Sample Output
+// Array = {23, 5, 67, 20, 3, 30, 79, 3, 70, 2}
+// Descending Order = {79, 70, 67, 30, 23, 20, 5, 3, 3, 2}
+    private static void descendingArr() {
+       int[] array = {23, 5, 67, 20, 3, 30, 79, 3, 70, 2};
+    }
+
+// 3. Write a program to print sum values of an array
+
+// Sample Output
+// Array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+// Sum Values of Array = 55
+
+    private static void sumOfArrElements() {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int result = 0;
+        for (int i = 0; i < array.length; i++) {
+            result = result + array[i];
+        }
+       System.out.println(result);
+    }
+
+// 4. Write a program to calculate the average value of array elements
+
+// Sample Output
+// Array = {1, 2, 3, 4, 5}
+// Sum of Array Value : 15
+// Average of Array Value : 3.0
+    
+    private static void avgValueOfElements() {
+        int[] arr = {1, 2, 3, 4, 5};
+        int sum = 0;
+        double avg = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+
+        avg = sum/arr.length;
+        System.out.println("Sum of Array Value : "+sum);
+        System.out.println("Average of Array Value : "+avg);
+    }
+
+// 5. Write a program to store elements in an array and print it
+
+// Sample Output
+// Array Size = 5
+// Element of a[0] = 5
+// Element of a[1] = 11
+// Element of a[2] = 22
+// Element of a[3] = 33
+// Element of a[4] = 44
+// Display Array Elements
+// 5
+// 11
+// 22
+// 33
+// 44
+
+private static void storeElementAndPrint() {
+    int[] arr = new int[5];
+    arr[0] = 5;
+    arr[1] = 11;
+    arr[2] = 22;
+    arr[3] = 33;
+    arr[4] = 44;
+
+    for (int i : arr) {
+        System.out.println(i);
+    }
+
+}
+
+// 6. Write a program in to array size to be user input print it
+
+// Sample Output
+// Enter the Array Limit = 4
+// Element of a[0] = 10
+// Element of a[1] = 20
+// Element of a[2] = 30
+// Element of a[3] = 40
+
+// Display Array Elements
+// 10
+// 20
+// 30
+// 40
+
+    private static void userInputArr() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter a array limit: ");
+        int li = in.nextInt();
+        int arr[] = new int[li];
+        for (int i = 0; i < li; i++) {
+            System.out.printf("Element of arr[%d] = ",i);
+            arr[i] = in.nextInt();
+        }
+
+        for (int i : arr) {
+            System.out.println(i);
+        }
+    }
+
+// 7. Write a program in to find the sum of all elements of the array
+
+// Sample Output
+// Array = {10, 20, 30, 40, 50, 60}
+// Sum of Array Elements = 210
+
+    private static void userInputSumArr() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter a array limit: ");
+        int li = in.nextInt();
+        int arr[] = new int[li];
+        int sum = 0;
+        for (int i = 0; i < li; i++) {
+            System.out.printf("Element of arr[%d] = ",i);
+            arr[i] = in.nextInt();
+            sum += arr[i];
+        }
+        System.out.println("Sum of Array Elements "+sum);
+    }
+
+
 }
 
 /*
-
-1. Write a program to Sort Numeric Array In Ascending Order
-
-Sample Output
-Array = {23, 5, 67, 20, 3, 30, 79, 3, 70, 2}
-Ascending Order = {2, 3, 3, 5, 20, 23, 30, 67, 70, 79}
-
-
-2. Write a program to Sort Numeric Array In Descending Order
-
-Sample Output
-Array = {23, 5, 67, 20, 3, 30, 79, 3, 70, 2}
-Descending Order = {79, 70, 67, 30, 23, 20, 5, 3, 3, 2}
-
-3. Write a program to print sum values of an array
-
-Sample Output
-Array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-Sum Values of Array = 55
-
-
-
-4. Write a program to calculate the average value of array elements
-
-Sample Output
-Array = {1, 2, 3, 4, 5}
-Sum of Array Value : 15
-Average of Array Value : 3.0
-
-
-5. Write a program to store elements in an array and print it
-
-Sample Output
-Array Size = 5
-Element of a[0] = 5
-Element of a[1] = 11
-Element of a[2] = 22
-Element of a[3] = 33
-Element of a[4] = 44
-Display Array Elements
-5
-11
-22
-33
-44
-
-
-6. Write a program in to array size to be user input print it
-
-Sample Output
-Enter the Array Limit = 4
-Element of a[0] = 10
-Element of a[1] = 20
-Element of a[2] = 30
-Element of a[3] = 40
-
-Display Array Elements
-10
-20
-30
-40
-
-
-7. Write a program in to find the sum of all elements of the array
-
-Sample Output
-Array = {10, 20, 30, 40, 50, 60}
-Sum of Array Elements = 210
 
 
 8. Write a program in to read n number of values in an array and display it in reverse order

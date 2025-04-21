@@ -20,7 +20,14 @@ public class Programs_Loops {
         // findASCIIvalue();
         // findFactorialNumber();
         // findResultOfPowerNumber();
-        reverseGivenDigits();
+        // reverseGivenDigits();
+        // sumOfDigits();
+        // isPrime();
+
+        // findHCF();
+        // findWhichTypeOfNumber();
+        // findLargestSmallestNumberFromGivenNum();
+        findNumberAndSum_DivisibleBy9();
     }
 
     // 1. Write a program to print all natural numbers from 1 to n
@@ -209,20 +216,156 @@ public class Programs_Loops {
     
     // 15. write a program to reverse the given Digits
     private static void reverseGivenDigits() {
-        System.out.println("enter a number : ");
+        System.out.print("enter a number : ");
         int numDigits = userInputNumbers();
-        int remider = 0;
+        int gNum = numDigits;
+        int reminder = 0;
         int reversed = 0;
-        // while(n > 0){
-        //     remider%
-        // }
+
+
+        while(numDigits > 0){
+            reminder = numDigits%10;
+            reversed = reversed * 10 + reminder;  //rev --multiplied by 10 is to add the current digit to the reversed number. 
+            numDigits /= 10;        //Condition --remove the last digit from given number and continue the loop
+        }
+
+        System.out.println("Given Digits :" + gNum);
+		System.out.println("Reverse Digits :" + reversed);
 
     }
 
 // 16. write a program to sum of its Digits
-// 17. write a program to Check Whether a Given Number is Prime or Not
-// 18. Write a program to calculate HCF of Two given number
+private static void sumOfDigits() {
+    System.out.print("enter a number");
+    int numDigits = userInputNumbers();
+    int gNum =numDigits;
+    int sum =0;
+    int reminder =0;
+    while (numDigits > 0) {
+        reminder = numDigits%10;
+        sum = sum + reminder;   // sum of the digits
+        numDigits /= 10;    // condition to stop the loop
+    }
 
+    System.out.println("Given Digits :" + gNum);
+    System.out.println("Sum of Digits :" + sum);
+
+}
+
+// 17. write a program to Check Whether a Given Number is Prime or Not
+    private static void isPrime() {
+        System.out.print("enter a number : ");
+        int num = userInputNumbers();
+        int count =0;
+
+        for (int i = 2; i < num; i++) {
+            if (num%i == 0) {
+                count++;
+                break;
+            } 
+        }
+
+        if (count == 0) 
+            System.out.println("This is a Prime Number.");
+		else
+			System.out.println("This is not a Prime Number.");
+      
+    }
+
+// 18. Write a program to calculate HCF of Two given number
+// common divider number's product(multiplication) for two given number is HCF    
+    private static void findHCF() {
+        System.out.print("enter two numbers : ");
+        int num1 = userInputNumbers();
+        int num2 = userInputNumbers();
+
+        // while (num1 > 0 && num2 > 0) {
+        //     if (condition) {
+                
+        //     }
+        // }
+
+
+    }
+
+    // 19. Write a program to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros entered
+    private static void findWhichTypeOfNumber() {
+        int countPositiveNum = 0;
+        int countNegativeNum = 0;
+        int countZero = 0;
+        char choice;
+
+        Scanner in = new Scanner(System.in);
+        
+        do {
+            System.out.print("enter a number: ");
+            int num = userInputNumbers();
+            if (num > 0) {
+                countPositiveNum+=1;
+            } else if (num < 0) {
+                countNegativeNum+=1;
+            } else if (num == 0) {
+                countZero += 1;
+            }
+            System.out.print("Do you want to Continue y/n? ");
+            choice = in.next().charAt(0);
+        } while (choice == 'y' || choice == 'Y');
+          
+        System.out.println("count of positive numbers :" + countPositiveNum);
+        System.out.println("count of negative numbers :" + countNegativeNum);
+        System.out.println("count of zeros : "+ countZero);
+    
+    }
+
+
+    // 20. Write a program to enter the numbers till the user wants and at the end the program should display the largest and smallest numbers entered
+    private static void findLargestSmallestNumberFromGivenNum() {
+        int largestNum = Integer.MIN_VALUE;
+        int smallestNum = Integer.MAX_VALUE;
+        char choice;
+
+        System.out.println(largestNum);
+        System.out.println(smallestNum);
+
+
+        Scanner in = new Scanner(System.in);
+    
+        do {
+            System.out.print("enter a number: ");
+            int num = userInputNumbers();
+            if (num > largestNum) {
+                largestNum = num;
+                
+            } 
+            if (num < smallestNum) {
+                smallestNum = num;
+            }
+            System.out.print("Do you want to Continue y/n? ");
+            choice = in.next().charAt(0);
+        } while (choice == 'y' || choice == 'Y');
+          
+        System.out.println("smallest numbers :" + smallestNum);
+        System.out.println("largest numbers :" + largestNum);
+    }
+
+// 21. Write a program to find number and sum of all integer between 100 and 200 which are divisible by 9
+    private static void findNumberAndSum_DivisibleBy9() {
+        int sumNum = 0;
+        int count = 0;
+        for (int i = 100; i <= 200; i++) {
+            if (i%9 == 0) {
+                sumNum = sumNum + i;
+                count++;
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+        System.out.println("sum of the integer which are divisible by 9 : "+ sumNum);
+        System.out.println("divisible number count is : "+ count);
+
+    }
+
+// 22. Write a program to convert a binary number into a decimal number without using array, function and while loop
     private static int userInputNumbers() {
         Scanner in = new Scanner(System.in);
         return in.nextInt();
@@ -233,10 +376,6 @@ public class Programs_Loops {
 }
 
 
-// 19. Write a program to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros entered
-// 20. Write a program to enter the numbers till the user wants and at the end the program should display the largest and smallest numbers entered
-// 21. Write a program to find number and sum of all integer between 100 and 200 which are divisible by 9
-// 22. Write a program to convert a binary number into a decimal number without using array, function and while loop
 // 23. Write a program to check whether a number is a Strong Number or not
 // 24. Write a program to convert Hexadecimal to Decimal number system
 // 25. Write a Program to convert Hexadecimal to Octal number system
