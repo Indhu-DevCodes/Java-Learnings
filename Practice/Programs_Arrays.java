@@ -1,5 +1,6 @@
 package Practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Programs_Arrays {
@@ -11,7 +12,9 @@ public class Programs_Arrays {
         // avgValueOfElements();
         // storeElementAndPrint();
         // userInputArr();
-        userInputSumArr();
+        // userInputSumArr();
+        // reverseArr();
+        printCubicArrValues();
     }
 
     
@@ -150,34 +153,81 @@ private static void storeElementAndPrint() {
     }
 
 
+// 8. Write a program in to read n number of values in an array and display it in reverse order
+
+// Sample Output
+// Enter the Array Size = 5
+// Element of a[0] = 1
+// Element of a[1] = 2
+// Element of a[2] = 3
+// Element of a[3] = 4
+// Element of a[4] = 5
+
+// Display Reverse Order
+// 5
+// 4
+// 3
+// 2
+// 1
+
+private static void reverseArr() {
+    System.out.print("enter the array size: ");
+    Scanner in = new Scanner(System.in);
+    int arrSize = in.nextInt();
+    int[] arr = new int[arrSize];
+    for (int i = 0; i < arr.length; i++) {
+        System.out.printf("element of arr[%d] = ",i);        
+        arr[i] = in.nextInt();
+    }
+
+    int start = 0;
+    int end = arrSize - 1;
+    int temp;
+    while (start < end) {
+        temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+
+    System.out.println(Arrays.toString(arr));
+}
+
+// 9. Write a program to array elements to print cubic values
+
+// Sample Output
+// Array = {1, 2, 3, 4, 5}
+// Cubic Array Elements =1 8 27 64 125
+
+    private static void printCubicArrValues() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("enter array size: ");
+        int arrSize = in.nextInt();
+        int[] a = new int[arrSize];
+
+        for (int i = 0; i < a.length; i++) {
+            System.out.printf("element of a[%d] = ",i);
+            a[i] = in.nextInt();
+        }
+
+        System.out.print("Cubic array elements are ");
+        for (int i : a) {
+            System.out.print(i*i*i+" ");
+
+        }
+    }
+
+
 }
 
 /*
 
 
-8. Write a program in to read n number of values in an array and display it in reverse order
-
-Sample Output
-Enter the Array Size = 5
-Element of a[0] = 1
-Element of a[1] = 2
-Element of a[2] = 3
-Element of a[3] = 4
-Element of a[4] = 5
-
-Display Reverse Order
-5
-4
-3
-2
-1
 
 
-9. Write a program to array elements to print cubic values
 
-Sample Output
-Array = {1, 2, 3, 4, 5}
-Cubic Array Elements =1 8 27 64 125
+
 
 
 10. Write a program to find the maximum and minimum element in an array
