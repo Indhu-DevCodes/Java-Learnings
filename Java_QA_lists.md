@@ -2,7 +2,7 @@
 
 [1. What is Java?](#java_01)
 
-[2. Why is Java platform independent?](java_02)
+[2. Why is Java platform independent?](#java_02)
 
 <h3 id="java_01">☕ What is Java?</h3>
 
