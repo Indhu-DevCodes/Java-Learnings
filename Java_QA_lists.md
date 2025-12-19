@@ -19,15 +19,61 @@
 9. [What is the main method in Java?](#java_09) 
 
 10. [Why is the main method static?](#java_10)
-11. What happens if the main method is not static?
-12. What is class and object in Java?
-13. What is the difference between C++ and Java?
-14. Is Java 100% object-oriented? Why?
+
+11. [What happens if the main method is not static?](#java_11)
+
+12. [What is class and object in Java?](#java_12)
+
+13. [What is the difference between C++ and Java?](#java_13)
+
+14. [Is Java 100% object-oriented? Why?](#java_14)
+
+15. [](#java_0)
+
+16. [](#java_0)
+
+17. [](#java_0)
+
+## 2. Data Types & Variables
+
+1. [](#java_D1)
+
+2. [](#java_D2)
+
+3. [](#java_D3)
+
+4. [](#java_D4)
+
+5. [](#java_D5)
+
+6. [](#java_D6)
+
+7. [](#java_D7)
+
+8. [](#java_D8)
+
+9. [](#java_D9)
+
+10. [](#java_D10)
+
+11. [](#java_D11)
+
+12. [](#java_D12)
+
+13. [](#java_D13)
+
+14. [](#java_D14)
 
 
 
-[](#java_03)
-<h3 id="java_06"></h3>
+
+
+
+
+
+
+[](#java_0)
+<h3 id="java_0"></h3>
 
 <h3 id="java_01">☕ What is Java?</h3>
 
@@ -266,14 +312,75 @@ class Test {
 
 <h3 id="java_10">10. Why is the main method static?</h3>
 
-
+---
 
 <h3 id="java_11">11. What happens if the main method is not static?</h3>
 
+---
 
-11. What is class and object in Java?
-12. What is the difference between C++ and Java?
-13. Is Java 100% object-oriented? Why?
+<h3 id="java_12">12. What is class and object in Java?</h3>
+
+---
+
+<h3 id="java_13">13. What is the difference between C++ and Java?</h3>
+
+---
+
+<h3 id="java_14">14. Is Java 100% object-oriented? Why?</h3>
+
+---
+
+<h3 id="java_D1">1. What are data types in Java?</h3>
+
+---
+
+<h3 id="java_D2">2. What are primitive data types?</h3>
+
+---
+
+<h3 id="java_D3">3. What are non-primitive data types?</h3>
+
+---
+
+<h3 id="java_D4">4. What is the default value of primitive data types?</h3>
+
+---
+
+<h3 id="java_D5">5. What is type casting?</h3>
+
+---
+
+<h3 id="java_D6">6. What is implicit type casting?</h3>
+
+---
+
+<h3 id="java_D7">7. What is explicit type casting?</h3>
+
+---
+
+<h3 id="java_D8">8. What is a variable?</h3>
+
+---
+
+<h3 id="java_D9">9. What are local variables?</h3>
+
+---
+
+<h3 id="java_D10">10. What are instance variables?</h3>
+
+---
+
+<h3 id="java_D11">11. What are static variables?</h3>
+
+---
+
+<h3 id="java_D12">12. What is the difference between local, instance, and static variables?</h3>
+
+---
+
+<h3 id="java_D13">13. What is final variable?</h3>
+
+---
 
 
 
