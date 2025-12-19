@@ -296,38 +296,188 @@ public static void main(String[] args)
 * **String[] args** 
   ➡️ Used to accept **command-line arguments**.
 
-### 📌 Example:
-
-```
-class Test {
-    public static void main(String[] args) {
-        System.out.println("Hello Java");
-    }
-}
-```
+<img  alt="Image" src="https://github.com/user-attachments/assets/ced76123-8eee-4f4e-9481-aeb4bfbb1e59" />
 
 > The main method is the starting point of execution for any Java program.
 
 ---
 
-<h3 id="java_10">10. Why is the main method static?</h3>
+<h3 id="java_10">10. Why is the main method static? ❓</h3>
+
+➡️ The main() method is static in Java, so the JVM can directly invoke it without instantiating the class’s object.
+
+## 🔹 How does JVM call `main()` using the class name?
+
+1️) JVM starts the program
+
+When you run a Java program:
+
+```bash
+java Test
+```
+
+➡️ JVM loads the class **Test** into memory.
+
+2️) JVM looks for `main()` method
+
+JVM specifically searches for this method signature:
+
+```java
+public static void main(String[] args)
+```
+
+3️) Why `static` matters here 🔑
+
+* **Static methods belong to the class**, not to objects
+* JVM can call a static method **directly using the class name**
+* No object creation is required
+
+Internally, JVM does something like:
+
+```java
+Test.main(args);
+```
+
+👉 This is possible **only because `main()` is static**
+
+4️) What if `main()` was NOT static? ❌
+
+* JVM would need to create an object first, but object creation needs a Constructor. It may need parameters but JVM doesn’t know which constructor to use
+➡️ So execution fails
+
+```java
+Test obj = new Test();
+obj.main(args);
+```
+
+🔁 Simple Flow Diagram (in words)
+
+```
+java Test
+   ↓
+JVM loads Test class
+   ↓
+Calls Test.main(args)   ← (static method)
+   ↓
+Program starts
+```
+
+> Declaring `main()` as static allows the JVM to call it directly using the class name without creating an object.
 
 ---
 
 <h3 id="java_11">11. What happens if the main method is not static?</h3>
 
+If the `main()` method is **non-static**, the JVM would need to **create an object of the class** in order to call it.
+However, creating an object requires calling a **constructor**.
+
+If the class has **multiple constructors** or a constructor that **takes parameters**, the JVM would face a problem:
+
+* Which constructor should be called?
+* What arguments should be passed to the constructor?
+
+Since the JVM **cannot instantiate a class without calling a constructor**, and there is **no rule to decide which constructor and parameters to use**, this leads to **ambiguity**.
+
+Therefore, to avoid this ambiguity and to allow the JVM to start execution **without creating an object**, the `main()` method is declared **static**.
+
 ---
 
 <h3 id="java_12">12. What is class and object in Java?</h3>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/030fec84-a667-4b53-ac57-fa94d949c12d" />
+
+### 🎓 **Class and Object in Java**
+
+In Java, a **class** is a **blueprint or template** that defines the structure and behavior of objects. It specifies **what data members (variables)** and **methods** an object will have, but it does not represent a real entity by itself.
+
+An **object** is a **real instance of a class**. It represents a real-world entity and occupies memory. Multiple objects can be created from the same class, and each object can have **its own state (data values)** while sharing the same behavior.
+
+```java
+class Student {
+    String name;
+    void study() {
+        System.out.println("Student is studying");
+    }
+}
+
+Student s1 = new Student();
+Student s2 = new Student();
+```
+
+Here:
+
+* `Student` → **Class**
+* `s1`, `s2` → **Objects**
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/2bd2b8ec-60f1-421b-b117-c4a8a470866d" />
+
+### 🔑 Key Points:
+
+* A **class** is logical and does not occupy memory
+* An **object** is physical and occupies memory
+* One class can create **many objects**
+* Objects store data, classes define structure
+
+> A class is a blueprint that defines properties and behavior, while an object is an instance of that class that represents a real-world entity.
 
 ---
 
 <h3 id="java_13">13. What is the difference between C++ and Java?</h3>
 
+<img  alt="Image" src="https://github.com/user-attachments/assets/659ac20a-9899-4cc8-9271-e4015b146364" />
+
+| Feature                    | **C++**                                     | **Java**                                              |
+| -------------------------- | ------------------------------------------- | ----------------------------------------------------- |
+| **Platform Dependency** 🌍 | Platform dependent                          | Platform independent (uses JVM)                       |
+| **Compilation** ⚙️         | Compiled directly to machine code           | Compiled to bytecode and run on JVM                   |
+| **Memory Management** 🧠   | Manual (using pointers, `new`, `delete`)    | Automatic (Garbage Collection)                        |
+| **Pointers** 👉            | Supports pointers                           | No explicit pointers                                  |
+| **Object-Oriented** 🧩     | Partially object-oriented                   | Fully object-oriented                                 |
+| **Inheritance** 🧬         | Supports multiple inheritance (via classes) | No multiple inheritance via classes (uses interfaces) |
+| **Security** 🔐            | Less secure                                 | More secure (JVM, bytecode verification)              |
+| **Portability** 🎒         | Low portability                             | High portability                                      |
+| **Execution Speed** ⚡     | Faster (direct machine code)                | Slightly slower (JVM involved)                        |
+| **Use Case** 🏭            | System software, games, OS                  | Web apps, enterprise apps, Android                    |
+
+### 🧠 Simple Explanation:
+
+* **C++** works closer to hardware and gives more control to the programmer.
+* **Java** focuses on security, portability, and ease of development.
+
+> C++ is a platform-dependent language with manual memory management, while Java is platform-independent and uses automatic memory management through JVM.
+
 ---
 
 <h3 id="java_14">14. Is Java 100% object-oriented? Why?</h3>
 
+➡️ **No, Java is NOT 100% object-oriented.**
+
+Although Java is **mostly object-oriented**, it has a few features that prevent it from being purely object-oriented.
+
+1. **Primitive Data Types**
+
+   * Java supports primitives like `int`, `char`, `float`, `boolean`
+   * These are **not objects**
+
+2. **Static Methods and Variables**
+
+   * The `main()` method is `static`
+   * Static members belong to the **class**, not to objects
+
+3. **Wrapper Classes Exist**
+
+   * Primitives need wrapper classes (`Integer`, `Character`, etc.) to behave like objects
+   * This proves primitives are not objects by default
+
+✅ Why Java is still called Object-Oriented:
+
+Everything is written **inside a class** that supports core OOP concepts:
+
+  * Encapsulation
+  * Inheritance
+  * Polymorphism
+  * Abstraction
+ 
 ---
 
 <h3 id="java_D1">1. What are data types in Java?</h3>
