@@ -75,6 +75,8 @@
 [](#java_0)
 <h3 id="java_0"></h3>
 
+## 1. Java Basics & Fundamentals
+
 <h3 id="java_01">☕ What is Java?</h3>
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/ff257a2e-b797-4eff-9143-5085badf9472" />
@@ -480,39 +482,221 @@ Everything is written **inside a class** that supports core OOP concepts:
  
 ---
 
+## 2. Data Types & Variables
+
 <h3 id="java_D1">1. What are data types in Java?</h3>
+
+### 🧩 What are Data Types in Java? (Simple Explanation)
+
+**Data types in Java** are used to **tell the compiler what kind of value a variable can store**.
+They help Java **use memory efficiently** and **prevent errors**.
+
+Java data types are divided into **two groups**:
+
+## 🔑 Short to Remember
+
+| Type                                    | Stores              | Category      |
+| --------------------------------------- | ------------------- | ------------- |
+| `int`, `char`, `boolean`                | Actual value        | Primitive     |
+| `Class`, `Interface`, `Array`, `String` | Reference to object | Non-Primitive |
+
+> **Data types in Java define the type of value a variable can store and the operations that can be performed on it.**
 
 ---
 
 <h3 id="java_D2">2. What are primitive data types?</h3>
 
+### Primitive Data Types 🔢 - 📌 Java has **8 primitive data types** in total.
+
+* `int` – stores whole numbers
+* `float` – stores decimal numbers
+* `char` – stores a single character
+* `boolean` – stores `true` or `false`
+* `byte` stores small integer values
+* `short` stores short-range integers
+* `long` stores large whole numbers
+* `double` stores high-precision decimal values
+
+![Image](https://github.com/user-attachments/assets/a993f1c1-575a-450d-a032-f2512d8644f8)
+
+![Image](https://github.com/user-attachments/assets/6e4a9029-fe66-4731-833f-5849b69857e7)
+
 ---
 
 <h3 id="java_D3">3. What are non-primitive data types?</h3>
+
+### Non-Primitive Data Types (reference data types)📦
+
+These store **objects and collections of data**. **Non-primitive data types store references (addresses) to objects**, not the actual value.
+
+* `String` – stores text
+* `Array` – stores multiple values of same type
+* `Class` – user-defined data type
+* `Interface` – blueprint of a class
+
+## ⭐ Example
+
+```java
+int age = 20;          // primitive
+String name = "Java"; // non-primitive
+```
+
+## Class – *User-defined data type* 🧩 When you create a **class**, you are defining a **new data type**.
+
+### Example:
+
+```java
+class Student {
+    int id;
+    String name;
+}
+```
+
+Here, `Student` becomes a **new data type**. Now create an object:
+
+```java
+Student s = new Student();
+```
+
+🔹 `s` does **not store the actual data**
+🔹 `s` stores a **reference (memory address)** of the `Student` object
+
+✅ Because it stores a **reference**, `Student` is a **non-primitive data type**.
+
+Interface – *Blueprint of a class* 🧱 An **interface** defines **what a class should do**, not how.
+
+### Example:
+
+```java
+interface Vehicle {
+    void run();
+}
+```
+
+You cannot create an object directly:
+
+```java
+Vehicle v = new Car();  // Car implements Vehicle
+```
+
+🔹 `v` holds a **reference** to an object of a class that implements `Vehicle`
+🔹 It does **not store a value like int or char**
+
+✅ Hence, `Interface` is also a **non-primitive (reference) data type**.
+
+![Image](https://github.com/user-attachments/assets/c2381f7e-46c8-474b-b548-67f269d7a637)
 
 ---
 
 <h3 id="java_D4">4. What is the default value of primitive data types?</h3>
 
+📌In Java, **default values are automatically assigned only to instance variables and static variables**.
+(Local variables do **not** get default values.)
+
+| Data Type | Default Value               |
+| --------- | --------------------------- |
+| `byte`    | `0`                         |
+| `short`   | `0`                         |
+| `int`     | `0`                         |
+| `long`    | `0L`                        |
+| `float`   | `0.0f`                      |
+| `double`  | `0.0`                       |
+| `char`    | `'\u0000'` (null character) |
+| `boolean` | `false`                     |
+
+> **Primitive data types in Java have predefined default values when declared as instance or static variables.**
+
+## 🔑 Example
+
+```java
+class DefaultValueExample {
+    int a;
+    boolean flag;
+
+    public static void main(String[] args) {
+        DefaultValueExample obj = new DefaultValueExample();
+        System.out.println(obj.a);     // 0
+        System.out.println(obj.flag);  // false
+    }
+}
+```
+
 ---
 
 <h3 id="java_D5">5. What is type casting?</h3>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/bf6b396d-e511-41d3-9acc-6c30b0be58df" />
+
+**Type casting** in Java refers to **converting a variable from one data type to another** to ensure type compatibility during assignments or operations.
+
+## 🔹 Why is Type Casting Needed?
+
+* To **assign values** between different data types
+* To **avoid compile-time errors**
+* To **control data conversion** in calculations
+
+## 🔑 Key Points
+
+* Widening is **safe and automatic**
+* Narrowing requires **explicit casting**
+* **boolean cannot be cast** to or from any other type
+* Casting applies mainly to **primitive data types**
+
+> **Type casting in Java is the conversion of one data type into another, either implicitly by the compiler or explicitly by the programmer.**
 
 ---
 
 <h3 id="java_D6">6. What is implicit type casting?</h3>
 
+### Widening Type Casting (Implicit)
+
+* Performed **automatically by the compiler**
+* Converts **lower data type → higher data type**
+* **No data loss**
+
+📌 Example:
+
+```java
+int a = 10;
+double b = a;
+```
+
 ---
 
 <h3 id="java_D7">7. What is explicit type casting?</h3>
+
+### Narrowing Type Casting (Explicit)
+
+* Performed **manually by the programmer**
+* Converts **higher data type → lower data type**
+* **Possible data loss**
+
+📌 Example:
+
+```java
+double x = 12.5;
+int y = (int) x;
+```
 
 ---
 
 <h3 id="java_D8">8. What is a variable?</h3>
 
+📌 A **variable in Java** is a **container that holds a data value during the execution of a program**.
+It acts as a **name for a specific memory location**, allowing data to be **stored, accessed, and modified**.
+
+Each variable must be **declared with a data type**, which determines:
+
+* The **type of value** it can store (such as integer, decimal, or text)
+* The **amount of memory** allocated for it
+
+> **A variable is a named memory location used to store data values that can change during program execution.**
+
 ---
 
 <h3 id="java_D9">9. What are local variables?</h3>
+
+
 
 ---
 
