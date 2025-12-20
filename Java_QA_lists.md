@@ -36,29 +36,29 @@
 
 ## 2. Data Types & Variables
 
-1. [](#java_D1)
+1. [What are data types in Java?](#java_D1)
 
-2. [](#java_D2)
+2. [What are primitive data types?](#java_D2)
 
-3. [](#java_D3)
+3. [What are non-primitive data types?](#java_D3)
 
-4. [](#java_D4)
+4. [What is the default value of primitive data types?](#java_D4)
 
-5. [](#java_D5)
+5. [What is type casting?](#java_D5)
 
-6. [](#java_D6)
+6. [What is implicit type casting?](#java_D6)
 
-7. [](#java_D7)
+7. [What is explicit type casting?](#java_D7)
 
-8. [](#java_D8)
+8. [What is a variable?](#java_D8)
 
-9. [](#java_D9)
+9. [What are local variables?](#java_D9)
 
-10. [](#java_D10)
+10. [What are instance variables?](#java_D10)
 
-11. [](#java_D11)
+11. [What are static variables?](#java_D11)
 
-12. [](#java_D12)
+12. [What is final variable?](#java_D12)
 
 13. [](#java_D13)
 
@@ -696,23 +696,157 @@ Each variable must be **declared with a data type**, which determines:
 
 <h3 id="java_D9">9. What are local variables?</h3>
 
+## **Local Variables**
 
+* Declared **inside a method, constructor, or block**. 
+* Scope is **limited to that method or block only**. 
+* Must be **initialized before use** — no default values. 
+* **Destroyed when the method/block finishes execution**. 
+
+📌 *When to use:*
+✔ For temporary computation and method-specific data 
+
+💡 Quick Notes
+✔ **Local variables** → method/block-level, temporary scope.
+
+## ✅ Example:
+
+```java
+class Example {
+    void display() {
+        int x = 10;   // local variable
+        System.out.println(x);
+    }
+}
+```
+
+📌 Local variables exist **only during method execution**.
 
 ---
 
 <h3 id="java_D10">10. What are instance variables?</h3>
 
+## **Instance Variables (Non-Static)**
+
+* Declared **inside a class but outside any method, constructor, or block**. 
+* **Each object** of the class has its **own copy** of an instance variable. 
+* Initialized when **an object is created** and exists until the object is destroyed. 
+* Accessed through **object references** (e.g., `myObj.instanceVar`). 
+
+📌 *When to use:*
+✔ For data that varies from object to object
+✔ To represent the state of an object 
+
+💡 Quick Notes
+✔ **Instance variables** → object-level, each object has its own.
+
+
+## ✅ Example:
+
+```java
+class Student {
+    int id;           // instance variable
+    String name;      // instance variable
+}
+```
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student();
+
+        s1.id = 1;
+        s1.name = "Arun";
+
+        s2.id = 2;
+        s2.name = "Kiran";
+
+        System.out.println(s1.name);
+        System.out.println(s2.name);
+    }
+}
+```
+
+📌 Instance variables represent the **state of an object**.
+
 ---
 
 <h3 id="java_D11">11. What are static variables?</h3>
 
+## **Static Variables (Class Variables)**
+
+* Declared with the **`static`** keyword inside a class but **outside any method**. 
+* **Belong to the class**, not to individual objects. 
+* **Only one copy** exists, shared by all objects of that class. 
+* Initialized **once when the class loads** and retains its value throughout program execution. 
+* **Can be accessed using the class name** (e.g., `MyClass.count`). 
+
+📌 *When to use:*
+✔ For data shared by all objects
+✔ For constants (usually declared with `static final`) 
+
+💡 Quick Notes
+✔ **Static variables** → class-level, shared by all objects. 
+
+## ✅ Example:
+
+```java
+class Student {
+    static String college = "ABC College"; // static variable
+}
+```
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student();
+
+        System.out.println(s1.college);
+        System.out.println(s2.college);
+    }
+}
+```
+
+📌 Only one copy of `college` exists and is shared by all `Student` objects.
+
+
+## 🔑 Comparison
+
+| Variable Type | Scope        | Memory            | Default Value |
+| ------------- | ------------ | ----------------- | ------------- |
+| Static        | Class        | Method/Class Area | Yes           |
+| Instance      | Object       | Heap              | Yes           |
+| Local         | Method/Block | Stack             | No            |
+
 ---
 
-<h3 id="java_D12">12. What is the difference between local, instance, and static variables?</h3>
+<h3 id="java_D12">12. What is final variable?</h3>
 
 ---
 
-<h3 id="java_D13">13. What is final variable?</h3>
+<h3 id="java_"></h3>
+
+---
+
+<h3 id="java_"></h3>
+
+---
+
+<h3 id="java_"></h3>
+
+---
+
+<h3 id="java_"></h3>
+
+---
+
+<h3 id="java_"></h3>
+
+---
+
+<h3 id="java_"></h3>
 
 ---
 
