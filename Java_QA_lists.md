@@ -1117,7 +1117,7 @@ if (age >= 18) {
 
 Both **`if`** and **`switch`** are **decision-making control statements** used to execute code based on conditions, but they differ in usage and flexibility.
 
-## 🔍 Key Differences
+🔍 Key Differences
 
 | Feature              | `if / else`                                | `switch`                                         |   
 | -------------------- | ------------------------------------------ | ------------------------------------------------ | 
@@ -1131,7 +1131,7 @@ Both **`if`** and **`switch`** are **decision-making control statements** used t
 
 ✅ Example
 
-## Using `if`
+Using `if`
 
 ```java
 int marks = 75;
@@ -1145,7 +1145,7 @@ if (marks >= 90) {
 }
 ```
 
-## Using `switch`
+Using `switch`
 
 ```java
 int day = 2;
@@ -1167,6 +1167,30 @@ switch (day) {
 ---
 
 <h3 id="java_Op9">9. What is the difference between for, while, and do-while loop?</h3>
+
+In Java, **`for`**, **`while`**, and **`do-while`** loops are used to **repeat a block of code**, but they differ in **how and when the condition is checked** and **when they are used**.
+
+🔹 **`for` loop**
+The `for` loop is used when the **number of iterations is known in advance**.
+Initialization, condition checking, and increment/decrement are written in **one line**, which makes the loop compact and readable.
+It is commonly used in **count-controlled loops**.
+
+Example use case: looping from 1 to 10.
+
+🔹 **`while` loop**
+The `while` loop is used when the **number of iterations is not known beforehand**.
+The condition is checked **before** executing the loop body, so the loop may **not execute at all** if the condition is false initially.
+It is mostly used for **condition-controlled loops**.
+
+Example use case: reading input until a condition becomes false.
+
+🔹 **`do-while` loop**
+The `do-while` loop is similar to the `while` loop, but the key difference is that the **condition is checked after the loop body executes**.
+This guarantees that the loop **executes at least once**, even if the condition is false initially.
+
+Example use case: menu-driven programs where the menu must be displayed at least once.
+
+> **The `for` loop is used when the iteration count is known, the `while` loop is used when the condition depends on runtime logic, and the `do-while` loop ensures at least one execution.**
 
 ---
 
