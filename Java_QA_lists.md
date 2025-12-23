@@ -64,29 +64,32 @@
 
 14. [](#java_D14)
 
-1. [](#java_D1)
 
-2. [](#java_D2)
+## 3. Operators & Control Statements
 
-3. [](#java_D3)
+1. [What are operators in Java?](#java_Op1)
 
-4. [](#java_D4)
+2. [What are arithmetic operators?](#java_Op2)
 
-5. [](#java_D5)
+3. [What are relational operators?](#java_Op3)
 
-6. [](#java_D6)
+4. [What are logical operators?](#java_Op4)
 
-7. [](#java_D7)
+5. [What is the ternary operator?](#java_Op5)
 
-8. [](#java_D8)
+6. [What is operator precedence?](#java_Op6)
 
-9. [](#java_D9)
+7. [What are control statements?](#java_Op7)
 
-10. [](#java_D10)
+8. [What is the difference between if and switch?](#java_Op8)
 
-11. [](#java_D11)
+9. [What is the difference between for, while, and do-while loop?](#java_Op9)
 
-12. [](#java_D12)
+10. [What is break statement?](#java_Op10)
+
+11. [What is continue statement?](#java_Op11)
+
+12. [What is the use of return statement?](#java_Op12)
 
 13. [](#java_D13)
 
@@ -847,8 +850,6 @@ public class Test {
 
 <h3 id="java_D12">12. What is final variable?</h3>
 
-### 📌 What is a **final variable**? (Interview Perspective)
-
 A **final variable** in Java is a variable whose **value cannot be changed once it is assigned**. It is used to make a variable **constant**.
 
 🔹 Key Points
@@ -880,51 +881,255 @@ class Example {
 
 ## 3. Operators & Control Statements
 
-<h3 id="java_">1. What are operators in Java?</h3>
+<h3 id="java_Op1">1. What are operators in Java?</h3>
+
+<img width="1090" height="526" alt="Image" src="https://github.com/user-attachments/assets/0f136b53-2f07-48d3-9521-d30889ce46b2" />
+
+**Operators in Java** are **symbols** used to **perform operations on variables and values**, such as arithmetic calculations, comparisons, and logical decisions.
+Each operator performs specific operations. Let us consider an expression 5 + 1 = 6; here, 5 and 1 are operands, and the symbol + (plus) is called the operator.
+
+🔹 Why Operators Are Used
+
+* To **manipulate data**
+* To **perform calculations**
+* To **make decisions in programs**
+
+> **Operators in Java are special symbols that perform operations on operands to produce a result.**
 
 ---
 
-<h3 id="java_">2. What are arithmetic operators?</h3>
+<h3 id="java_Op2">2. What are arithmetic operators?</h3>
+
+**Arithmetic operators** are operators used to **perform basic mathematical operations** on numeric values.
+
+🔹 Arithmetic Operators in Java
+
+* **`+`** → Addition
+* **`-`** → Subtraction
+* **`*`** → Multiplication
+* **`/`** → Division
+* **`%`** → Modulus (remainder)
+
+✅ Example
+
+```java
+int a = 10;
+int b = 3;
+
+System.out.println(a + b); // 13
+System.out.println(a - b); // 7
+System.out.println(a * b); // 30
+System.out.println(a / b); // 3
+System.out.println(a % b); // 1
+```
+
+> **Arithmetic operators are used to perform mathematical calculations such as addition, subtraction, multiplication, division, and modulus.**
 
 ---
 
-<h3 id="java_">3. What are relational operators?</h3>
+<h3 id="java_Op3">3. What are relational operators?</h3>
+
+**Relational operators** are used to **compare two values or variables** and return a **boolean result** (`true` or `false`).
+
+🔹 Relational Operators in Java
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| `==`     | Equal to                 |
+| `!=`     | Not equal to             |
+| `>`      | Greater than             |
+| `<`      | Less than                |
+| `>=`     | Greater than or equal to |
+| `<=`     | Less than or equal to    |
+
+### ✅ Example
+
+```java
+int a = 10, b = 20;
+
+System.out.println(a == b); // false
+System.out.println(a != b); // true
+System.out.println(a > b);  // false
+System.out.println(a < b);  // true
+System.out.println(a >= b); // false
+System.out.println(a <= b); // true
+```
+
+🔑 Key Points
+
+* Result is always **boolean**
+* Used in **conditions and decision-making statements**
+* `==` compares values (not objects)
+
+> **Relational operators compare two operands and return a boolean value indicating the relationship between them.**
 
 ---
 
-<h3 id="java_">4. What are logical operators?</h3>
+<h3 id="java_Op4">4. What are logical operators?</h3>
+
+**Logical operators** are used to **combine or invert boolean expressions** and return a **boolean result** (`true` or `false`).
+
+`&&`  ->  Logical AND ->  `true` if **both** conditions are true
+`||`  ->  Logical OR  ->  `true` if **at least one** condition is true
+`!`   ->  Logical NOT ->  Reverses the boolean value
+
+✅ Example
+
+```java
+int a = 10, b = 20;
+
+System.out.println(a < b && b > 5); // true
+System.out.println(a > b || b > 5); // true
+System.out.println(!(a < b));       // false
+```
+
+### 🔑 Key Points
+
+* Work only with **boolean values**
+* Commonly used in **if, while, and for conditions**
+* `&&` and `||` use **short-circuit evaluation**
+
+> **Logical operators are used to combine multiple boolean expressions and return a boolean result.**
 
 ---
 
-<h3 id="java_">5. What is the ternary operator?</h3>
+<h3 id="java_Op5">5. What is the ternary operator?</h3>
+
+The **ternary operator** in Java is a **conditional operator** that is used as a **short form of the `if–else` statement**.
+It evaluates a condition and returns one of two values based on whether the condition is **true or false**.
+
+🔹 Syntax
+
+```java
+condition ? expression1 : expression2;
+```
+
+* If the condition is **true** → `expression1` is executed
+* If the condition is **false** → `expression2` is executed
+
+✅ Example
+
+```java
+int a = 10, b = 20;
+
+int max = (a > b) ? a : b;
+System.out.println(max); // 20
+```
+
+🔑 Key Points
+
+* It is the **only operator with three operands**
+* Used to write **compact conditional logic**
+* Improves **code readability** when used properly
+* Returns a **value**
+
+> **The ternary operator is a conditional operator that evaluates a condition and returns one of two values based on the result.**
 
 ---
 
-<h3 id="java_">6. What is operator precedence?</h3>
+<h3 id="java_Op6">6. What is operator precedence?</h3>
+
+**Operator precedence** in Java defines the **order in which operators are evaluated** in an expression when multiple operators are present.
+
+🔹 Why Operator Precedence Is Important
+
+* It determines **which operation is performed first**
+* Prevents **ambiguity** in expressions
+* Helps avoid **logical errors**
+
+🔹 Example
+
+```java
+int result = 10 + 5 * 2;
+System.out.println(result); // 20
+```
+
+📌 Explanation:
+`*` has higher precedence than `+`, so multiplication is done first.
+
+🔹 Common Operator Precedence Order (High → Low)
+
+1. Unary operators (`++`, `--`, `!`)
+2. Arithmetic (`*`, `/`, `%`)
+3. Arithmetic (`+`, `-`)
+4. Relational (`<`, `>`, `<=`, `>=`)
+5. Equality (`==`, `!=`)
+6. Logical AND (`&&`)
+7. Logical OR (`||`)
+8. Ternary (`?:`)
+9. Assignment (`=`, `+=`, `-=`)
+
+🔑 Key Points
+
+* Parentheses `()` can be used to **override precedence**
+* When operators have the same precedence, **associativity** decides evaluation order
+
+> **Operator precedence determines the order in which operators are evaluated in an expression.**
 
 ---
 
-<h3 id="java_">7. What are control statements?</h3>
+<h3 id="java_Op7">7. What are control statements?</h3>
+
+**Control statements** in Java are used to **control the flow of execution** of a program based on **conditions or loops**.
+
+🔹 Why Control Statements Are Used
+
+* To make **decisions**
+* To **repeat** a block of code
+* To **transfer control** from one part of the program to another
+
+🔹 Types of Control Statements in Java
+
+Decision-Making Statements - Used to execute code based on conditions:
+
+* `if`
+* `if-else`
+* `else-if`
+* `switch`
+
+Looping Statements - Used to execute a block of code repeatedly:
+
+* `for`
+* `while`
+* `do-while`
+
+Jump Statements - Used to transfer control:
+
+* `break`
+* `continue`
+* `return`
+
+✅ Example
+
+```java
+int age = 18;
+
+if (age >= 18) {
+    System.out.println("Eligible to vote");
+}
+```
+
+> **Control statements are used to control the execution flow of a program based on conditions and loops.**
 
 ---
 
-<h3 id="java_">8. What is the difference between if and switch?</h3>
+<h3 id="java_Op8">8. What is the difference between if and switch?</h3>
 
 ---
 
-<h3 id="java_">9. What is the difference between for, while, and do-while loop?</h3>
+<h3 id="java_Op9">9. What is the difference between for, while, and do-while loop?</h3>
 
 ---
 
-<h3 id="java_">10. What is break statement?</h3>
+<h3 id="java_Op10">10. What is break statement?</h3>
 
 ---
 
-<h3 id="java_">11. What is continue statement?</h3>
+<h3 id="java_Op11">11. What is continue statement?</h3>
 
 ---
 
-<h3 id="java_">12. What is the use of return statement?</h3>
+<h3 id="java_Op12">12. What is the use of return statement?</h3>
 
 ---
 
