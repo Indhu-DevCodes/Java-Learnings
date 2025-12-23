@@ -64,10 +64,33 @@
 
 14. [](#java_D14)
 
+1. [](#java_D1)
 
+2. [](#java_D2)
 
+3. [](#java_D3)
 
+4. [](#java_D4)
 
+5. [](#java_D5)
+
+6. [](#java_D6)
+
+7. [](#java_D7)
+
+8. [](#java_D8)
+
+9. [](#java_D9)
+
+10. [](#java_D10)
+
+11. [](#java_D11)
+
+12. [](#java_D12)
+
+13. [](#java_D13)
+
+14. [](#java_D14)
 
 
 
@@ -824,31 +847,89 @@ public class Test {
 
 <h3 id="java_D12">12. What is final variable?</h3>
 
+### 📌 What is a **final variable**? (Interview Perspective)
+
+A **final variable** in Java is a variable whose **value cannot be changed once it is assigned**. It is used to make a variable **constant**.
+
+🔹 Key Points
+
+* Declared using the **`final` keyword**
+* Value must be **assigned only once**
+* After initialization, it **cannot be modified**
+* Used to define **constants**
+* Can be **local, instance, or static**
+
+✅ Example
+
+```java
+class Example {
+    final int MAX = 100;   // final variable
+
+    void display() {
+        // MAX = 200;  // ❌ Compile-time error
+        System.out.println(MAX);
+    }
+}
+```
+
+📌 `static final` variables are written in **UPPERCASE**.
+
+> **A final variable is a variable whose value cannot be changed once it is initialized.**
+
+---
+
+## 3. Operators & Control Statements
+
+<h3 id="java_">1. What are operators in Java?</h3>
+
+---
+
+<h3 id="java_">2. What are arithmetic operators?</h3>
+
+---
+
+<h3 id="java_">3. What are relational operators?</h3>
+
+---
+
+<h3 id="java_">4. What are logical operators?</h3>
+
+---
+
+<h3 id="java_">5. What is the ternary operator?</h3>
+
+---
+
+<h3 id="java_">6. What is operator precedence?</h3>
+
+---
+
+<h3 id="java_">7. What are control statements?</h3>
+
+---
+
+<h3 id="java_">8. What is the difference between if and switch?</h3>
+
+---
+
+<h3 id="java_">9. What is the difference between for, while, and do-while loop?</h3>
+
+---
+
+<h3 id="java_">10. What is break statement?</h3>
+
+---
+
+<h3 id="java_">11. What is continue statement?</h3>
+
+---
+
+<h3 id="java_">12. What is the use of return statement?</h3>
+
 ---
 
 <h3 id="java_"></h3>
 
----
-
-<h3 id="java_"></h3>
-
----
-
-<h3 id="java_"></h3>
-
----
-
-<h3 id="java_"></h3>
-
----
-
-<h3 id="java_"></h3>
-
----
-
-<h3 id="java_"></h3>
-
----
 
 
 
