@@ -1080,20 +1080,20 @@ System.out.println(result); // 20
 
 🔹 Types of Control Statements in Java
 
-Decision-Making Statements - Used to execute code based on conditions:
+1) Decision-Making Statements - Used to execute code based on conditions:
 
 * `if`
 * `if-else`
 * `else-if`
 * `switch`
 
-Looping Statements - Used to execute a block of code repeatedly:
+2) Looping Statements - Used to execute a block of code repeatedly:
 
 * `for`
 * `while`
 * `do-while`
 
-Jump Statements - Used to transfer control:
+3) Jump Statements - Used to transfer control:
 
 * `break`
 * `continue`
@@ -1114,6 +1114,55 @@ if (age >= 18) {
 ---
 
 <h3 id="java_Op8">8. What is the difference between if and switch?</h3>
+
+Both **`if`** and **`switch`** are **decision-making control statements** used to execute code based on conditions, but they differ in usage and flexibility.
+
+## 🔍 Key Differences
+
+| Feature              | `if / else`                                | `switch`                                         |   
+| -------------------- | ------------------------------------------ | ------------------------------------------------ | 
+| Condition type       | Works with **any boolean expression**      | Works with **single variable/value**             |    
+| Data types supported | All data types                             | `byte`, `short`, `int`, `char`, `String`, `enum` |   
+| Multiple conditions  | Can handle **complex conditions** (`&&`, ` OR `) | Cannot handle complex logical expressions  |
+| Range checking       | **Supported** (`age > 18`)                 | **Not supported**                                |   
+| Readability          | Better for **few conditions**              | Better for **many fixed values**                 |    
+| Performance          | Slower for many conditions                 | Faster for many cases (internally optimized)     |  
+| Default case         | `else`                                     | `default`                                        | 
+
+✅ Example
+
+## Using `if`
+
+```java
+int marks = 75;
+
+if (marks >= 90) {
+    System.out.println("Grade A");
+} else if (marks >= 75) {
+    System.out.println("Grade B");
+} else {
+    System.out.println("Grade C");
+}
+```
+
+## Using `switch`
+
+```java
+int day = 2;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+```
+
+> **`if` is used for complex and range-based conditions, while `switch` is used for multiple fixed-value comparisons.**
 
 ---
 
