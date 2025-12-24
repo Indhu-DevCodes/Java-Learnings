@@ -96,6 +96,25 @@
 14. [](#java_D14)
 
 
+## 4. Object-Oriented Programming (OOPS)
+
+1. [What is OOPS?](#java_Ob1)
+
+2. [What are the four pillars of OOPS?](#java_Ob2)
+
+3. [What is encapsulation?](#java_Ob3)
+
+4. [What is abstraction?](#java_Ob4)
+
+5. [What is inheritance??](#java_Ob5)
+
+6. [What is polymorphism?](#java_Ob6)
+
+7. [What is real-time example of OOPS?](#java_Ob7)
+
+8. [Why OOPS is important?](#java_Ob8)
+
+9. [How Java implements OOPS concepts?](#java_Ob9)
 
 
 [](#java_0)
