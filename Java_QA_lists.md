@@ -1225,6 +1225,153 @@ Example use case: menu-driven programs where the menu must be displayed at least
 
 ---
 
+## 4. Object-Oriented Programming (OOPS)
+
+<h3 id="java_Ob1">1. What is OOPS?</h3>
+
+**OOPS (Object-Oriented Programming System)** is a programming approach that organizes software around **objects** rather than functions or logic.
+
+OOPS models real-world entities as **objects** that contain:
+
+* **Data** → variables (attributes)
+* **Behavior** → methods (functions)
+
+🔹 Example (Real Life)
+
+A **Car** is an object
+
+* Data: color, speed, model
+* Behavior: start(), stop(), accelerate()
+
+🔹 Core OOPS Concepts in Java
+
+1. **Class** – Blueprint of an object
+2. **Object** – Instance of a class
+3. **Encapsulation** – Wrapping data and methods together using classes
+4. **Abstraction** – Showing essential features using interfaces/abstract classes
+5. **Inheritance** – One class acquiring properties of another
+6. **Polymorphism** – Same method behaving differently
+
+🔹 Why Java Uses OOPS?
+
+* Improves **code reusability**
+* Supports **real-world modeling**
+* Provides **security** through encapsulation
+* Helps build **large-scale applications**
+
+> *OOPS in Java is a programming approach that uses classes and objects to develop reusable, secure, and maintainable applications.*
+
+---
+
+<h3 id="java_Ob2">2. What are the four pillars of OOPS?</h3>
+
+The **four pillars of Object-Oriented Programming (OOPS)** in Java are the fundamental concepts used to design robust and scalable applications:
+
+Encapsulation, Abstraction, Inheritance, and Polymorphism.*
+
+🎯 Key Points:
+
+> *Inheritance enables code reuse, encapsulation secures data, Polymorphism allows one method to behave in multiple ways, abstraction hides complexity, and interfaces provide full abstraction and multiple inheritance in Java.*
+
+---
+
+<h3 id="java_Ob3">3. What is encapsulation?</h3>
+
+**Encapsulation** is the process of **binding data (variables) and methods into a single unit (class)** and protecting data using access modifiers means restricting direct access to the data.
+
+In Java:
+
+🔹 Variables are declared as `private` and access is provided through **public methods** (getters and setters)
+🔹 This ensures **data security, integrity, and controlled access**.
+
+📌 *Key Point:*
+Encapsulation hides the internal state of an object and allows access only through defined methods.
+
+---
+
+<h3 id="java_Ob4">4. What is abstraction?</h3>
+
+**Abstraction** is the process of **hiding implementation details** and showing only the **essential features** to the user.
+
+🔹 *Achieved using:*
+
+* `abstract` classes
+* `interfaces`
+
+It helps:
+
+* Reduce complexity
+* Improve maintainability
+* Separate **what to do** from **how to do**
+
+---
+
+<h3 id="java_Ob5">5. What is inheritance?</h3>
+
+**Inheritance** is the mechanism by which one class (**subclass / child class**) acquires the properties and behaviors of another class (**superclass / parent class**) using the `extends` keyword.
+
+It promotes **code reusability** and represents an **“is-a” relationship**.
+
+📌 *Example:*
+`Dog` is an `Animal`
+
+---
+
+<h3 id="java_Ob6">6. What is polymorphism?</h3>
+
+**Polymorphism** means **“one name, many forms.”**
+In Java, the same method can perform different behaviors depending on the object.
+
+🔹 **Types of Polymorphism in Java:**
+
+* **Compile-time** → Method Overloading
+* **Runtime** → Method Overriding
+
+> *Polymorphism allows the same method to perform different actions based on the object at runtime.*
+
+---
+
+<h3 id="java_Ob7">7. What is an Abstract Class in Java?</h3>
+
+An **abstract class** is declared using the `abstract` keyword.
+
+🔹 It Can have **abstract methods** (without body) and **non-abstract methods** (with body). 
+🔹 Astract class **Cannot be instantiated** (objects cannot be created). It must be **extended by a subclass**, Subclass must implement all abstract methods
+
+📌 *Note:*
+The `abstract` keyword is applicable to **classes and methods**, not variables.
+
+---
+
+<h3 id="java_Ob8">8. What is an Interface in Java?</h3>
+
+An **interface** is a blueprint used to achieve **100% abstraction** (until Java 7).
+
+🔹 Features:
+
+* Contains **abstract methods** (no method body)
+* Supports **multiple inheritance**
+* Variables are **public, static, and final** by default
+* Represents an **IS-A relationship**
+* Implemented using the `implements` keyword
+
+📌 *Purpose:*
+Interfaces are mainly used to achieve **abstraction and multiple inheritance** in Java.
+
+---
+
+<h3 id="java_Ob9">9. What is real-time example of OOPS?</h3>
+
+---
+
+<h3 id="java_Ob10">10. Why OOPS is important?</h3>
+
+---
+
+<h3 id="java_Ob11">11. How Java implements OOPS concepts?</h3>
+
+---
+
 <h3 id="java_"></h3>
 
 
