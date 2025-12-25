@@ -95,7 +95,6 @@
 
 14. [](#java_D14)
 
-
 ## 4. Object-Oriented Programming (OOPS)
 
 1. [What is OOPS?](#java_Ob1)
@@ -116,7 +115,83 @@
 
 9. [How Java implements OOPS concepts?](#java_Ob9)
 
+## 5. Inheritance
 
+1. [Why Java does not support multiple inheritance with classes?](#java_I1)
+
+2. [What are types of inheritance in Java?](#java_I2)
+
+3. [What is single inheritance?](#java_I3)
+
+4. [What is multilevel inheritance?](#java_I4)
+
+5. [What is hierarchical inheritance?](#java_I5)
+
+6. [How Java supports multiple inheritance using interfaces?](#java_I6)
+
+7. [What is `super` keyword?](#java_I7)
+
+8. [What is method overriding?](#java_I8)
+
+9. [What are rules for method overriding?](#java_I9)
+
+## 6. Polymorphism
+
+1. [What are types of polymorphism?](#java_P1)
+
+2. [What is compile-time polymorphism?](#java_P2)
+
+3. [What is runtime polymorphism?](#java_0)
+
+4. [What is method overloading?](#java_P4)
+
+5. [What is method overriding?](#java_P5)
+
+6. [Can we overload the main method?](#java_P6)
+
+7. [Can we override static methods?](#java_P7)
+
+8. [Can constructors be overridden?](#java_P8)
+
+9. [What is dynamic method dispatch?](#java_P9)
+
+## 7. Abstraction
+
+1. [Can abstract class have constructor?](#java_A1)
+
+2. [Can abstract class have non-abstract methods?](#java_A2)
+
+3. [Can abstract class have static methods?](#java_A3)
+
+4. [What is difference between abstract class and interface?](#java_A4)
+
+5. [Can we create object of abstract class?](#java_A5)
+
+6. [Why abstraction is important?](#java_A6)
+
+## 8. Interface
+ 
+1. [Why interface is used?](#java_In1)
+
+2. [Can interface have variables?](#java_In2)
+
+3. [Can interface have constructors?](#java_In3)
+
+4. [Can interface have methods with body?](#java_In4)
+
+5. [What is default method in interface?](#java_In5)
+
+6. [What is static method in interface?](#java_In6)
+
+7. [Can a class implement multiple interfaces?](#java_In7)
+
+8. [Can an interface extend another interface?](#java_In8)
+
+9. [What is functional interface?](#java_In9)
+
+
+[](#java_0)
+[](#java_0)
 [](#java_0)
 <h3 id="java_0"></h3>
 
@@ -1362,6 +1437,118 @@ Interfaces are mainly used to achieve **abstraction and multiple inheritance** i
 
 <h3 id="java_Ob9">9. What is real-time example of OOPS?</h3>
 
+### ✅ Real-Time Example of OOPS in Java
+
+A **Banking System** is a common **real-time example** of OOPS in Java because it uses all four pillars clearly.
+
+---
+
+### 🏦 Real-World Scenario: Banking System
+
+#### 🔹 Class & Object
+
+* **Class:** `Account`
+* **Objects:** `SavingsAccount`, `CurrentAccount`
+
+---
+
+### 🔹 Encapsulation
+
+Account details like **balance** and **accountNumber** are kept private and accessed only through methods.
+
+```java
+private double balance;
+
+public double getBalance() {
+    return balance;
+}
+```
+
+✔ Protects sensitive data
+
+---
+
+### 🔹 Inheritance
+
+`SavingsAccount` and `CurrentAccount` inherit from `Account`.
+
+```java
+class SavingsAccount extends Account { }
+```
+
+✔ Reuses common code
+
+---
+
+### 🔹 Abstraction
+
+User sees only essential operations like **deposit()** and **withdraw()**, not internal logic.
+
+```java
+abstract class Account {
+    abstract void withdraw(double amount);
+}
+```
+
+✔ Hides complexity
+
+### 🔹 Polymorphism
+
+**Polymorphism** means **one method name performing different actions** based on the object type. A **parent class reference** can refer to **different child account types**, and the method call is resolved **at runtime**.
+
+---
+
+### 🔹 Java Example
+
+```java
+class Account {
+    void calculateInterest() {
+        System.out.println("Calculating interest for bank account");
+    }
+}
+
+class SavingsAccount extends Account {
+    void calculateInterest() {
+        System.out.println("Savings account interest: 4%");
+    }
+}
+
+class CurrentAccount extends Account {
+    void calculateInterest() {
+        System.out.println("Current account has no interest");
+    }
+}
+```
+
+---
+
+🔹 Polymorphism in Action
+
+```java
+Account account;
+
+account = new SavingsAccount();
+account.calculateInterest();  
+// Output: Savings account interest: 4%
+
+account = new CurrentAccount();
+account.calculateInterest();  
+// Output: Current account has no interest
+```
+
+✔ Runtime method selection
+
+### 🔹 Why This Is Polymorphism?
+
+* Same **method name** → `calculateInterest()`
+* Same **reference type** → `BankAccount`
+* Different **behavior** → Savings vs Current account
+* Method decision happens at **runtime**
+
+> *Polymorphism in Java allows the same method call to behave differently depending on the bank account type at runtime.*
+
+> *A banking system is a real-time example of OOPS in Java where account details are encapsulated, account types use inheritance, operations are abstracted, and polymorphism allows different behaviors for the same method.*
+
 ---
 
 <h3 id="java_Ob10">10. Why OOPS is important?</h3>
@@ -1370,10 +1557,257 @@ Interfaces are mainly used to achieve **abstraction and multiple inheritance** i
 
 <h3 id="java_Ob11">11. How Java implements OOPS concepts?</h3>
 
+Java implements **Object-Oriented Programming System (OOPS)** concepts using **classes, objects, keywords, and language features**.
+
+🔹 1️⃣ Encapsulation
+
+Java implements encapsulation using:
+
+* **Classes**
+* **Access modifiers** (`private`, `public`, `protected`)
+* **Getters and setters**
+
+📌 *Example:*
+
+```java
+class Employee {
+    private int salary;
+
+    public int getSalary() {
+        return salary;
+    }
+}
+```
+
+✔ Data is protected from direct access
+
+🔹 2️⃣ Inheritance
+
+Java implements inheritance using the:
+
+* `extends` keyword (for classes)
+* `implements` keyword (for interfaces)
+
+📌 *Example:*
+
+```java
+class Manager extends Employee { }
+```
+
+✔ Enables code reuse and IS-A relationship
+
+🔹 3️⃣ Abstraction
+
+Java achieves abstraction using:
+
+* **Abstract classes**
+* **Interfaces**
+
+📌 *Example:*
+
+```java
+abstract class Shape {
+    abstract void draw();
+}
+```
+
+✔ Hides implementation details
+
+🔹 4️⃣ Polymorphism
+
+Java supports polymorphism through:
+
+* **Method Overloading** (compile-time)
+* **Method Overriding** (runtime)
+
+📌 *Example:*
+
+```java
+Shape s = new Circle();
+s.draw();
+```
+
+✔ Same method, different behavior
+
+🔹 5️⃣ Class and Object
+
+Java is class-based:
+
+* **Class** → Blueprint
+* **Object** → Real instance
+
+📌 *Example:*
+
+```java
+Car c = new Car();
+```
+
+> *Java implements OOPS concepts using classes and objects along with features like access modifiers, inheritance, encapsulation, abstraction, and polymorphism.*
+
 ---
 
-<h3 id="java_"></h3>
+## 5. Inheritance
 
+<h3 id="java_I1">1. Why Java does not support multiple inheritance with classes?</h3>
+
+---
+
+<h3 id="java_I2">2. What are types of inheritance in Java?</h3>
+
+---
+
+<h3 id="java_I3">3. What is single inheritance?</h3>
+
+---
+
+<h3 id="java_I4">4. What is multilevel inheritance?</h3>
+
+---
+
+<h3 id="java_I5">5. What is hierarchical inheritance?</h3>
+
+---
+
+<h3 id="java_I6">6. How Java supports multiple inheritance using interfaces?</h3>
+
+---
+
+<h3 id="java_I7">7. What is `super` keyword?</h3>
+
+---
+
+<h3 id="java_I8">8. What is method overriding?</h3>
+
+---
+
+<h3 id="java_I9">9. What are rules for method overriding?</h3>
+
+---
+
+## 6. Polymorphism
+
+<h3 id="java_P1">1. What is compile-time polymorphism?</h3>
+
+---
+
+<h3 id="java_P2">2. What is runtime polymorphism?</h3>
+
+---
+
+<h3 id="java_P3">3. What is method overloading?</h3>
+
+---
+
+<h3 id="java_P4">4. What is method overriding?</h3>
+
+---
+
+<h3 id="java_P5">5. Can we overload the main method?</h3>
+
+---
+
+<h3 id="java_P6">6. Can we override static methods?</h3>
+
+---
+
+<h3 id="java_P7">7. Can constructors be overridden?</h3>
+
+---
+
+<h3 id="java_P8">8. What is dynamic method dispatch?</h3>
+
+---
+
+## 7. Abstraction
+
+<h3 id="java_A1">1. Can abstract class have constructor?</h3>
+
+---
+
+<h3 id="java_A2">2. Can abstract class have non-abstract methods?</h3>
+
+---
+
+<h3 id="java_A3">3. Can abstract class have static methods?</h3>
+
+---
+
+<h3 id="java_A4">4. What is difference between abstract class and interface?</h3>
+
+---
+
+<h3 id="java_A5">5. Can we create object of abstract class?</h3>
+
+---
+
+<h3 id="java_A6">6. Why abstraction is important?</h3>
+
+---
+
+## 8. Interface
+
+<h3 id="java_In1">1. Why interface is used?</h3>
+
+---
+
+<h3 id="java_In2">2. Can interface have variables?</h3>
+
+---
+
+<h3 id="java_In3">3. Can interface have constructors?</h3>
+
+---
+
+<h3 id="java_In4">4. Can interface have methods with body?</h3>
+
+---
+
+<h3 id="java_In5">5. What is default method in interface?</h3>
+
+---
+
+<h3 id="java_In6">6. What is static method in interface?</h3>
+
+---
+
+<h3 id="java_In7">7. Can a class implement multiple interfaces?</h3>
+
+---
+
+<h3 id="java_In8">8. Can an interface extend another interface?</h3>
+
+---
+
+<h3 id="java_In9">9. What is functional interface?</h3>
+
+---
+
+## 9. Classes & Objects
+
+1. What is a class?
+2. What is an object?
+3. How to create an object in Java?
+4. What is a constructor?
+5. What are types of constructors?
+6. What is default constructor?
+7. What is parameterized constructor?
+8. Can we overload constructors?
+9. What is constructor chaining?
+10. Can a constructor be private?
+11. Can a constructor be static?
+12. What is the use of `this` keyword?
+
+<h3 id="java_In1"></h3>
+
+---
+
+<h3 id="java_In1"></h3>
+
+---
+
+<h3 id="java_In1"></h3>
+
+---
 
 
 
