@@ -129,11 +129,13 @@
 
 6. [How Java supports multiple inheritance using interfaces?](#java_I6)
 
-7. [What is `super` keyword?](#java_I7)
+7. [What is Hybrid inheritance?](#java_I7)
 
-8. [What is method overriding?](#java_I8)
+8. [What is `super` keyword?](#java_I8)
 
-9. [What are rules for method overriding?](#java_I9)
+9. [What is method overriding?](#java_I9)
+
+10. [What are rules for method overriding?](#java_I10)
 
 ## 6. Polymorphism
 
@@ -1650,37 +1652,195 @@ Car c = new Car();
 
 <h3 id="java_I1">1. Why Java does not support multiple inheritance with classes?</h3>
 
+Java **does not support multiple inheritance using classes**, but it **supports multiple inheritance through interfaces**.
+
+In Java, a **class cannot extend more than one class**. This restriction exists to **avoid ambiguity and complexity**, especially the **Diamond Problem**, where the compiler cannot decide which parent class method to inherit.
+
+However, Java allows **multiple inheritance using interfaces** because:
+
+* Interfaces do **not contain instance variables**
+* Method implementation ambiguity is avoided
+* A class must provide its **own implementation**
+
+## 📌 Key Points:
+
+* ❌ One class → **cannot extend multiple classes**
+* ✅ One interface → **can extend multiple interfaces**
+* ✅ One class → **can implement multiple interfaces**
+
+## 📘 Example:
+
+```java
+interface A {
+    void show();
+}
+
+interface B {
+    void show();
+}
+
+class C implements A, B {
+    public void show() {
+        System.out.println("Multiple inheritance achieved using interfaces");
+    }
+}
+```
+
+> Java does not support multiple inheritance with classes to avoid ambiguity, but it supports multiple inheritance through interfaces.
+
 ---
 
 <h3 id="java_I2">2. What are types of inheritance in Java?</h3>
+
+Java supports **five types of inheritance**.
+**Single, multilevel, and hierarchical inheritance** are supported using **classes**, while **multiple and hybrid inheritance** are supported using **interfaces**.
 
 ---
 
 <h3 id="java_I3">3. What is single inheritance?</h3>
 
+In single inheritance, a child class extends one parent class, allowing it to reuse properties and methods of the parent. This promotes code reusability, simplicity, and easy maintenance.
+
+```java
+class A { }
+class B extends A { }
+```
+
 ---
 
 <h3 id="java_I4">4. What is multilevel inheritance?</h3>
+
+A class is derived from another derived class, forming a **parent → child → grandchild** relationship.
+
+```java
+class A { }
+class B extends A { }
+class C extends B { }
+```
 
 ---
 
 <h3 id="java_I5">5. What is hierarchical inheritance?</h3>
 
+In hierarchical inheritance, one common parent class provides shared properties and methods, and multiple child classes extend it. This promotes code reusability and helps maintain a clear class hierarchy.
+
+```java
+class A { }
+class B extends A { }
+class C extends A { }
+```
+
 ---
 
 <h3 id="java_I6">6. How Java supports multiple inheritance using interfaces?</h3>
 
+Java supports multiple inheritance by allowing a **class to implement more than one interface** and allowing an **interface to extend multiple interfaces**.
+
+Java does not allow a class to extend multiple classes because it can cause ambiguity (Diamond Problem).
+To overcome this limitation, Java provides **interfaces**, which allow multiple inheritance in a safe way.
+
+Interfaces:
+
+* Do not have instance variables
+* Declare methods without implementation (or default methods with rules)
+* Force the implementing class to provide its own implementation
+
+This removes ambiguity and keeps the design simple.
+
+📌 Ways Java Achieves Multiple Inheritance Using Interfaces
+
+1️⃣ Class implementing multiple interfaces
+
+```java
+interface A {
+    void show();
+}
+
+interface B {
+    void display();
+}
+
+class C implements A, B {
+    public void show() {
+        System.out.println("Method from A");
+    }
+
+    public void display() {
+        System.out.println("Method from B");
+    }
+}
+```
+
+2️⃣ Interface extending multiple interfaces
+
+```java
+interface A {
+    void show();
+}
+
+interface B {
+    void display();
+}
+
+interface C extends A, B {
+}
+```
+🔹 Key Points
+
+* A class **cannot extend multiple classes**
+* A class **can implement multiple interfaces**
+* An interface **can extend multiple interfaces**
+* Avoids ambiguity and supports flexible design
+
+> Java supports multiple inheritance through interfaces by allowing a class to implement multiple interfaces and an interface to extend multiple interfaces.
+
 ---
 
-<h3 id="java_I7">7. What is `super` keyword?</h3>
+<h3 id="java_I7">7. What is Hybrid inheritance?</h3>
+
+Hybrid inheritance in Java is a combination of multiple inheritance types and is supported only through interfaces, not through classes. **Hybrid inheritance** is a **combination of two or more types of inheritance**, such as **single + multiple** or **multilevel + hierarchical** inheritance. 📌 *Not supported using classes.*
+
+🔹 How Java Achieves Hybrid Inheritance (Using Interfaces)
+
+An **interface can extend multiple interfaces**, and a **class can implement that interface**, forming a hybrid structure.
+
+```java
+interface A {
+    void show();
+}
+
+interface B {
+    void display();
+}
+
+// Hybrid inheritance: multiple + multilevel
+interface C extends A, B {
+}
+
+class D implements C {
+    public void show() {
+        System.out.println("A method");
+    }
+
+    public void display() {
+        System.out.println("B method");
+    }
+}
+```
+
+> Java **does not support multiple and hybrid inheritance using classes** to avoid ambiguity and complexity (Diamond Problem). Java supports single, multilevel, and hierarchical inheritance using classes, and multiple and hybrid inheritance using interfaces only.
 
 ---
 
-<h3 id="java_I8">8. What is method overriding?</h3>
+<h3 id="java_I8">8. What is `super` keyword?</h3>
 
 ---
 
-<h3 id="java_I9">9. What are rules for method overriding?</h3>
+<h3 id="java_I9">9. What is method overriding?</h3>
+
+---
+
+<h3 id="java_I10">10. What are rules for method overriding?</h3>
 
 ---
 
