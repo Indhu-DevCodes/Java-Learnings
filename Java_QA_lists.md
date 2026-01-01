@@ -1,197 +1,147 @@
 ## 1. Java Basics & Fundamentals
 
 1. [What is Java?](#java_01)
-
 2. [Why is Java platform independent?](#java_02)
-
 3. [What are the features of Java?](#java_03)
-
 4. [What is JDK?](#java_04)
-
 5. [What is JRE?](#java_05)
-
 6. [What is JVM?](#java_06)
-
 7. [What is bytecode?](#java_07)
-
 8. [Why Java is called a compiled and interpreted language?](#java_08)
-
 9. [What is the main method in Java?](#java_09) 
-
 10. [Why is the main method static?](#java_10)
-
 11. [What happens if the main method is not static?](#java_11)
-
 12. [What is class and object in Java?](#java_12)
-
 13. [What is the difference between C++ and Java?](#java_13)
-
 14. [Is Java 100% object-oriented? Why?](#java_14)
-
-15. [](#java_0)
-
-16. [](#java_0)
-
-17. [](#java_0)
 
 ## 2. Data Types & Variables
 
 1. [What are data types in Java?](#java_D1)
-
 2. [What are primitive data types?](#java_D2)
-
 3. [What are non-primitive data types?](#java_D3)
-
 4. [What is the default value of primitive data types?](#java_D4)
-
 5. [What is type casting?](#java_D5)
-
 6. [What is implicit type casting?](#java_D6)
-
 7. [What is explicit type casting?](#java_D7)
-
 8. [What is a variable?](#java_D8)
-
 9. [What are local variables?](#java_D9)
-
 10. [What are instance variables?](#java_D10)
-
 11. [What are static variables?](#java_D11)
-
 12. [What is final variable?](#java_D12)
-
-13. [](#java_D13)
-
-14. [](#java_D14)
-
 
 ## 3. Operators & Control Statements
 
 1. [What are operators in Java?](#java_Op1)
-
 2. [What are arithmetic operators?](#java_Op2)
-
 3. [What are relational operators?](#java_Op3)
-
 4. [What are logical operators?](#java_Op4)
-
 5. [What is the ternary operator?](#java_Op5)
-
 6. [What is operator precedence?](#java_Op6)
-
 7. [What are control statements?](#java_Op7)
-
 8. [What is the difference between if and switch?](#java_Op8)
-
 9. [What is the difference between for, while, and do-while loop?](#java_Op9)
-
 10. [What is break statement?](#java_Op10)
-
 11. [What is continue statement?](#java_Op11)
-
 12. [What is the use of return statement?](#java_Op12)
-
-13. [](#java_D13)
-
-14. [](#java_D14)
 
 ## 4. Object-Oriented Programming (OOPS)
 
 1. [What is OOPS?](#java_Ob1)
-
 2. [What are the four pillars of OOPS?](#java_Ob2)
-
 3. [What is encapsulation?](#java_Ob3)
-
 4. [What is abstraction?](#java_Ob4)
-
 5. [What is inheritance??](#java_Ob5)
-
 6. [What is polymorphism?](#java_Ob6)
-
 7. [What is real-time example of OOPS?](#java_Ob7)
-
 8. [Why OOPS is important?](#java_Ob8)
-
 9. [How Java implements OOPS concepts?](#java_Ob9)
 
-## 5. Inheritance
+## 5. Classes & Objects
+
+1. [What is a class?](#java_cl)
+2. [What is an object?](#java_cl)
+3. [How to create an object in Java?](#java_cl)
+4. [What is a constructor?](#java_cl)
+5. [What are types of constructors?](#java_cl)
+6. [What is default constructor?](#java_cl)
+7. [What is parameterized constructor?](#java_cl)
+8. [Can we overload constructors?](#java_cl)
+9. [What is constructor chaining?](#java_cl)
+10. [Can a constructor be private?](#java_cl)
+11. [Can a constructor be static?](#java_cl)
+12. [What is the use of `this` keyword?](#java_cl)
+
+## 6. Inheritance
 
 1. [Why Java does not support multiple inheritance with classes?](#java_I1)
-
 2. [What are types of inheritance in Java?](#java_I2)
-
 3. [What is single inheritance?](#java_I3)
-
 4. [What is multilevel inheritance?](#java_I4)
-
 5. [What is hierarchical inheritance?](#java_I5)
-
 6. [How Java supports multiple inheritance using interfaces?](#java_I6)
-
 7. [What is Hybrid inheritance?](#java_I7)
-
 8. [What is `super` keyword?](#java_I8)
-
 9. [What is method overriding?](#java_I9)
-
 10. [What are rules for method overriding?](#java_I10)
 
-## 6. Polymorphism
+## 7. Polymorphism
 
 1. [What are types of polymorphism?](#java_P1)
-
 2. [What is compile-time polymorphism?](#java_P2)
-
 3. [What is runtime polymorphism?](#java_0)
-
 4. [What is method overloading?](#java_P4)
-
 5. [What is method overriding?](#java_P5)
-
 6. [Can we overload the main method?](#java_P6)
-
 7. [Can we override static methods?](#java_P7)
-
 8. [Can constructors be overridden?](#java_P8)
-
 9. [What is dynamic method dispatch?](#java_P9)
 
-## 7. Abstraction
+## 8. Abstraction
 
 1. [Can abstract class have constructor?](#java_A1)
-
 2. [Can abstract class have non-abstract methods?](#java_A2)
-
 3. [Can abstract class have static methods?](#java_A3)
-
 4. [What is difference between abstract class and interface?](#java_A4)
-
 5. [Can we create object of abstract class?](#java_A5)
-
 6. [Why abstraction is important?](#java_A6)
 
-## 8. Interface
+## 9. Interface
  
 1. [Why interface is used?](#java_In1)
-
 2. [Can interface have variables?](#java_In2)
-
 3. [Can interface have constructors?](#java_In3)
-
 4. [Can interface have methods with body?](#java_In4)
-
 5. [What is default method in interface?](#java_In5)
-
 6. [What is static method in interface?](#java_In6)
-
 7. [Can a class implement multiple interfaces?](#java_In7)
-
 8. [Can an interface extend another interface?](#java_In8)
-
 9. [What is functional interface?](#java_In9)
 
+## 10. Access Modifiers
 
+1. [What are access modifiers in Java?](#java_Ac)
+2. [What is private access modifier?](#java_Ac)
+3. [What is default access modifier?](#java_Ac)
+4. [What is protected access modifier?](#java_Ac)
+5. [What is public access modifier?](#java_Ac)
+6. [What is the scope of each access modifier?](#java_Ac)
+7. [Can we override methods with different access levels?](#java_Ac)
+
+
+## 11. Packages
+
+1. [What is a package?](#java_pa)
+2. [Why packages are used?](#java_pa)
+3. [What are built-in packages in Java?](#java_pa)
+4. [What is user-defined package?](#java_pa)
+5. [What is `import` statement?](#java_pa)
+6. [What is static import?](#java_pa)
+7. [Can a package have sub-packages?](#java_pa)
+8. [What happens if two classes have same name in different packages?](#java_pa)
+
+[](#java_0)
+[](#java_0)
 [](#java_0)
 [](#java_0)
 [](#java_0)
@@ -1648,7 +1598,60 @@ Car c = new Car();
 
 ---
 
-## 5. Inheritance
+
+---
+
+## 5. Classes & Objects
+
+<h3 id="java_cl">1. What is a class?</h3>
+
+---
+
+<h3 id="java_cl">2. What is an object?</h3>
+
+---
+
+<h3 id="java_cl">3. How to create an object in Java?</h3>
+
+---
+
+<h3 id="java_cl">4. What is a constructor?</h3>
+
+---
+
+<h3 id="java_cl">5. What are types of constructors?</h3>
+
+---
+
+<h3 id="java_cl">6. What is default constructor?</h3>
+
+---
+
+<h3 id="java_cl">7. What is parameterized constructor?</h3>
+
+---
+
+<h3 id="java_cl">8. Can we overload constructors?</h3>
+
+---
+
+<h3 id="java_cl">9. What is constructor chaining?</h3>
+
+---
+
+<h3 id="java_cl">10. Can a constructor be private?</h3>
+
+---
+
+<h3 id="java_cl">11. Can a constructor be static?</h3>
+
+---
+
+<h3 id="java_cl">12. What is the use of `this` keyword?</h3>
+
+---
+
+## 6. Inheritance
 
 <h3 id="java_I1">1. Why Java does not support multiple inheritance with classes?</h3>
 
@@ -1844,7 +1847,7 @@ class D implements C {
 
 ---
 
-## 6. Polymorphism
+## 7. Polymorphism
 
 <h3 id="java_P1">1. What is compile-time polymorphism?</h3>
 
@@ -1878,7 +1881,7 @@ class D implements C {
 
 ---
 
-## 7. Abstraction
+## 8. Abstraction
 
 <h3 id="java_A1">1. Can abstract class have constructor?</h3>
 
@@ -1904,7 +1907,7 @@ class D implements C {
 
 ---
 
-## 8. Interface
+## 9. Interface
 
 <h3 id="java_In1">1. Why interface is used?</h3>
 
@@ -1942,32 +1945,36 @@ class D implements C {
 
 ---
 
-## 9. Classes & Objects
+## 10. Access Modifiers
 
-1. What is a class?
-2. What is an object?
-3. How to create an object in Java?
-4. What is a constructor?
-5. What are types of constructors?
-6. What is default constructor?
-7. What is parameterized constructor?
-8. Can we overload constructors?
-9. What is constructor chaining?
-10. Can a constructor be private?
-11. Can a constructor be static?
-12. What is the use of `this` keyword?
-
-<h3 id="java_In1"></h3>
+<h3 id="java_Ac">1. What are access modifiers in Java?</h3>
 
 ---
 
-<h3 id="java_In1"></h3>
+<h3 id="java_Ac">2. What is private access modifier?</h3>
 
 ---
 
-<h3 id="java_In1"></h3>
+<h3 id="java_Ac">3. What is default access modifier?</h3>
 
 ---
+
+<h3 id="java_Ac">4. What is protected access modifier?</h3>
+
+---
+
+<h3 id="java_Ac">5. What is public access modifier?</h3>
+
+---
+
+<h3 id="java_Ac">6. What is the scope of each access modifier?</h3>
+
+---
+
+<h3 id="java_Ac">7. Can we override methods with different access levels?</h3>
+
+---
+
 
 
 
